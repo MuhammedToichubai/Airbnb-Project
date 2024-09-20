@@ -1,5 +1,6 @@
 package peaksoft.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Favorite {
@@ -8,6 +9,7 @@ public class Favorite {
     private List<Announcement> announcements;
 
     public Favorite() {
+        announcements = new ArrayList<>();
     }
 
     public Favorite(User user, List<Announcement> announcements) {

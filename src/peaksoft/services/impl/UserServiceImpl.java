@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User signIn(String email, String password) {
-        List<User> allUsers = userDao.findAll();
+        List<User> allUsers = userDao.findAll(); //database
         for (User user : allUsers) {
             if (user.getEmail().equals(email) && user.getPassword().equals(password)){
                 return user;

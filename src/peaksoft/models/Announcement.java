@@ -25,6 +25,15 @@ public class Announcement {
         this.houseType = houseType;
     }
 
+    public Announcement(String title, String description, BigDecimal price, List<String> images, User owner, HouseType houseType) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.images = images;
+        this.owner = owner;
+        this.houseType = houseType;
+    }
+
     public Long getId() {
         return id;
     }

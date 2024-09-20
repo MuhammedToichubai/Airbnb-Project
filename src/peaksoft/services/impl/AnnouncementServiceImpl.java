@@ -7,6 +7,8 @@ import peaksoft.models.Announcement;
 import peaksoft.models.User;
 import peaksoft.services.AnnouncementService;
 
+import java.util.List;
+
 public class AnnouncementServiceImpl implements AnnouncementService {
     private final AnnouncementDaoImpl announcementDao;
     private final UserDaoImpl userDao;
@@ -26,8 +28,17 @@ public class AnnouncementServiceImpl implements AnnouncementService {
         }
         announcement.setOwner(foundUser);
         announcementDao.save(announcement);
-
-        System.out.println(announcement.getOwner());
         return "Successfully saved!";
+    }
+
+
+    @Override
+    public List<Announcement> getAllAnnouncementsByOwnerId(Long ownerId) {
+        return announcementDao.getAnnouncementsByOwnerId(ownerId);
+    }
+
+    @Override
+    public List<Announcement> getAll() {
+        return announcementDao.getAll();
     }
 }

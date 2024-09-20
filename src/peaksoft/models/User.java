@@ -1,5 +1,6 @@
 package peaksoft.models;
 
+
 public class User {
     private Long id;
     private String fullName;
@@ -7,6 +8,7 @@ public class User {
     private String password;
     private String avatar;
     private String phoneNumber;
+    private Favorite favorite;
 
 
     public User() {
@@ -66,6 +68,14 @@ public class User {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public Favorite getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(Favorite favorite) {
+        this.favorite = favorite;
     }
 
     @Override
